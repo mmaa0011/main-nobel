@@ -9,8 +9,8 @@
 <body>
 
   <div id="game">
-    <img id="bg" src="MeetingHall.png" alt="">
-    <img id="character" src="시온_2.png" alt="">
+    <img id="bg" src="/Users/satoumasaki/3年次プロN3Q/code:nobel/MeetingHall.png" alt="">
+    <img id="character" src="/Users/satoumasaki/3年次プロN3Q/code:nobel/시온_2.png" alt="">
    
     <div id="choices"></div>
 
@@ -20,6 +20,29 @@
     </div>
 
   </div>
+
+  <button id="end-button" style="
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.8s;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #ff5757;
+  color: white;
+  cursor: pointer;
+">
+購入ページへ進む
+</button>
+
+<script>
+document.getElementById("end-button").onclick = function() {
+  window.location.href = "https://store.steampowered.com/app/3764400/LIMIT_ZERO_BREAKERS/?l=japanese";
+};
+</script>
+
 
   <script src="script2.js"></script>
 </body>
