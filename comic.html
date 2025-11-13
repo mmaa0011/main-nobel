@@ -18,31 +18,13 @@
       <div id="name">？？？</div>
       <div id="text"></div>
     </div>
-
   </div>
 
-  <button id="end-button" style="
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.8s;
-  margin-top: 20px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  background: #ff5757;
-  color: white;
-  cursor: pointer;
-">
-購入ページへ進む
-</button>
+  <!-- オーバーレイ -->
+  <div id="overlay"></div>
 
-<script>
-document.getElementById("end-button").onclick = function() {
-  window.location.href = "https://store.steampowered.com/app/3764400/LIMIT_ZERO_BREAKERS/?l=japanese";
-};
-</script>
-
+  <!-- 中央ボタン -->
+  <button id="end-button">もう後戻りはできない</button>
 
   <script src="script2.js"></script>
 </body>
