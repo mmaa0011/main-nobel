@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>待機画面</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>魔法陣カウントダウン</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- 魔法陣キャンバス -->
+  <canvas id="magic-circle"></canvas>
 
-  <div id="locked">
-    <h1>解放まで</h1>
-    <div id="countdown">00:10</div>
+  <div class="container">
+    <div class="countdown-label">開放まで</div> <!-- 追加 -->
+    <div class="meter-bg">
+      <div class="meter-fill"></div>
+    </div>
+    <div class="countdown-text">10</div>
   </div>
+  
 
-  <!-- 通知風ポップアップ -->
+  
+  <!-- 通知 -->
   <div id="notify" class="hidden">
-    📢 新しいエピソードが解放されました！<br>
-    タップして読む →
+    <div class="notify-title">リミットゼロブレイカーズ</div>
+    <div class="notify-body">誰かが私を呼んでいる</div>
   </div>
 
   <script src="script.js"></script>
