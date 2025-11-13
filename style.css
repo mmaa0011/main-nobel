@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #00bfff; /* 濃い青に変更 */
+  color: #00bfff; 
 }
 
 canvas#magic-circle {
@@ -30,15 +30,15 @@ canvas#magic-circle {
   height: 24px;
   background: rgba(255,255,255,0.1);
   margin: 0 auto 12px;
-  transform: skew(-20deg); /* 背景を左に傾ける */
-  overflow: hidden; /* 中身がはみ出さないように */
+  transform: skew(-20deg); 
+  overflow: hidden; 
 }
 
 .meter-fill {
   width: 100%;
   height: 100%;
   background: #00bfff;
-  transform: skew(20deg); /* 中身を逆傾けで水平に見せる */
+  transform: skew(20deg);
   transform-origin: left center;
   transition: width 0.3s linear;
 }
@@ -61,8 +61,8 @@ canvas#magic-circle {
   max-width: 380px;
   padding: 16px 20px;
   border-radius: 16px;
-  background: rgba(255,255,255,0.85); /* 半透明 */
-  backdrop-filter: blur(18px); /* iPhone風ぼかし */
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(18px); 
   -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   color: #111;
