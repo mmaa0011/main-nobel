@@ -1,58 +1,63 @@
 body {
-    margin: 0;
-    background: #000;
-    font-family: "Yu Gothic", sans-serif;
-  }
-  
-  #game {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  /* 背景 */
-  #bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* 立ち絵 */
-  #character {
-    position: absolute;
-    bottom: 15%;
-    left: 46%;
-    width: 60%;
-    transform: translateX(-50%);
-    pointer-events: none;
-  }
-  
-  /* テキストウィンドウ */
-  #textbox {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.6);
-    padding: 18px;
-    color: #fff;
-    box-sizing: border-box;
-  }
-  
-  #name {
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-size: 1.0rem;
-  }
-  
-  #text {
-    font-size: 1.05rem;
-    line-height: 1.6;
-  }
+  margin: 0;
+  background: #000;
+  font-family: "Yu Gothic", sans-serif;
+}
 
-  /* 既存CSSはそのまま */
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
+/* 背景 */
+#bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+/* 立ち絵 */
+#character {
+  position: absolute;
+  bottom: 15%;
+  left: 46%;
+  width: 60%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+/* テキストウィンドウ */
+#textbox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  padding: 18px;
+  color: #fff;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#name {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.0rem;
+}
+
+#text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* 選択肢 */
 #choices {
   position: absolute;
   bottom: 120px;
@@ -62,6 +67,8 @@ body {
   gap: 10px;
   padding: 0 20px;
   box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .choice-btn {
@@ -73,4 +80,40 @@ body {
   text-align: center;
 }
 
-  
+/* フェードイン用クラス */
+.fade-in {
+  opacity: 1 !important;
+}
+
+/* オーバーレイ */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 10;
+}
+
+/* 中央ボタン */
+#end-button {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #ff5757;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+  z-index: 11;
+}
