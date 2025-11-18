@@ -1,7 +1,7 @@
 // -----------------
 // カウントダウンと横メーター
 // -----------------
-let remaining = 10;
+let remaining = 5;
 const countdownText = document.querySelector(".countdown-text");
 const meterFill = document.querySelector(".meter-fill");
 const elNotify = document.getElementById("notify");
