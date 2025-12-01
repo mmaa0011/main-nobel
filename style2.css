@@ -26,12 +26,15 @@ body {
   position: absolute;
   bottom: 15%;
   left: 46%;
-  width: 60%;
+  width: 100%;        /* ← ここを大きくする */
   transform: translateX(-50%);
   pointer-events: none;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
+
+
+
 
 /* テキストウィンドウ */
 #textbox {
