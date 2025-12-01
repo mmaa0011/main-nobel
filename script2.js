@@ -4,7 +4,7 @@
 const scenarioSets = [
   {
     name: "リズ",
-    characterImg: "/Users/satoumasaki/3年次プロN3Q/code:nobel/リズ　サイズ.png",
+    characterImg: "リズサイズ.png",
     scenario: [
       { name: "XX", text: "あー！　やっと起きたのだ！" },//0
 
@@ -98,7 +98,7 @@ const scenarioSets = [
    // ★ 3人目：シオンーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
    {
     name: "シオン",
-    characterImg: "/Users/satoumasaki/3年次プロN3Q/code:nobel/シオン　サイズ.png",
+    characterImg: "シオンサイズ.png",
     scenario: [
       { name: "シオン", text: "……やっと起きた？" },//0
 
@@ -184,7 +184,7 @@ const scenarioSets = [
 
   {
     name: "カイト",
-    characterImg: "/Users/satoumasaki/3年次プロN3Q/code:nobel/かいと　サイズ.png",
+    characterImg: "kaitoサイズ.png",
     scenario: [
       { name: "XX", text: "おー！　やっと起きた？" },//0
 
