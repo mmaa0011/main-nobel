@@ -1,30 +1,43 @@
 // -----------------
-// カウントダウンと横メーター
+// カウントダウン（日時ベースで正確に）
 // -----------------
-let remaining = 5;
-const countdownText = document.querySelector(".countdown-text");
-const meterFill = document.querySelector(".meter-fill");
+const totalSeconds = 3;  // ← ここを3秒に変更
+let countdownText = document.querySelector(".countdown-text");
+let meterFill = document.querySelector(".meter-fill");
 const elNotify = document.getElementById("notify");
 
 // 初期表示
-countdownText.textContent = remaining;
+countdownText.textContent = totalSeconds;
 meterFill.style.width = "100%";
 
-// タイマー
-const timer = setInterval(()=>{
-  remaining--;
-  if(remaining<0) return;
+let endTime = Date.now() + totalSeconds * 1000;
+let rafId = null;
 
-  countdownText.textContent = remaining;
-  const percent = remaining / 10 * 100;
-  meterFill.style.width = percent + '%';
+function update() {
+  const now = Date.now();
+  const msLeft = Math.max(0, endTime - now); // ミリ秒の残り
+  const secondsLeft = Math.ceil(msLeft / 1000); // 表示は切り上げで 1 秒単位
+  const percent = (msLeft / (totalSeconds * 1000)) * 100;
 
-  // 0秒になったら通知表示
-  if(remaining === 0){
-    clearInterval(timer);
+  countdownText.textContent = secondsLeft;
+  meterFill.style.width = percent + "%";
+
+  if (msLeft === 0) {
     showNotify();
+    if (rafId) cancelAnimationFrame(rafId);
+    return;
   }
-},1000);
+
+  rafId = requestAnimationFrame(update);
+}
+
+// アニメ開始
+rafId = requestAnimationFrame(update);
+
+// 通知クリック
+elNotify.addEventListener('click', () => {
+  window.location.href = 'comic.html';
+});
 
 // -----------------
 // iPhone風通知
