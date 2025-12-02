@@ -118,7 +118,7 @@ const scenarioSets = [
     name: "シオン",
     characterImg: "シオンサイズ.png",
     scenario: [
-      { name: "シオン", text: "……やっと起きた？" },//0
+      { name: "XX", text: "……やっと起きた？" },//0
 
       {
         type: "choice",//1,2,3
