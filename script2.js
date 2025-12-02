@@ -1,4 +1,22 @@
 // ==============================
+//   タッチ案内（1秒だけ表示）
+// ==============================
+window.addEventListener("DOMContentLoaded", () => {
+  const touchHint = document.createElement("div");
+  touchHint.id = "touch-hint";
+  touchHint.textContent = "▶ タップして進む";
+  document.body.appendChild(touchHint);
+
+  // 1秒後にフェードアウト → DOMから削除
+  setTimeout(() => {
+    touchHint.style.opacity = "0";
+    setTimeout(() => {
+      touchHint.remove();
+    }, 800); // フェードアウトに合わせる
+  }, 1000); // ← ここを1秒(1000ms)に変更
+});
+
+// ==============================
 //  キャラ別シナリオセット
 // ==============================
 const scenarioSets = [
